@@ -1,0 +1,35 @@
+extends ../../layouts/default.pug
+
+block main 
+    #title #{title}
+     .card(style='width: 100%;')
+      .row.p-3
+        .col-6
+            button.btn.btn-outline-success.active(type='button') ALL 
+            button.btn.btn-outline-success.mx-3(type='button') Higher
+            button.btn.btn-outline-success(type='button') Lower
+        .col-6 
+            form.form-inline
+                .form-group
+                    input#inputPassword2.form-control(type='text', placeholder='Search...')
+                button.btn.btn-success(type='submit') Find
+    table(style='width:100%')
+        tr
+            th STT
+            th IMAGE
+            th TITLE 
+            th PRICE 
+            th RATING 
+            th ACTION
+        each item in products
+            tr
+                td #{item.id}
+                td 
+                    img.img-admin-products(src=item.thumbnail)
+                td #{item.title} 
+                td #{item.price}$
+                td #{item.rating} 
+                td 
+                    button.btn.btn-warning.mx-2 Update 
+                    button.btn.btn-danger Delete
+        

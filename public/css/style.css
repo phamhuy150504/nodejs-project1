@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.logo-image {
+    width: 100px;
+}
+
+.footer {
+    background-color: red;
+    text-align: center;
+    color: white;
+    font-size: 25px;
+}
+
+.inner-image  {
+    width: 100%;
+    height: 250px;
+    border-radius: 6px;
+}
+
+.img-product {
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+.card {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.inner-content {
+    padding: 0 15px;
+}
+
